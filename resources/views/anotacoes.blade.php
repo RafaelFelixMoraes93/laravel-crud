@@ -107,8 +107,14 @@
     </ul>
 
     <h2>Delete</h2>
-    <p>Criar rota /posts/update, acessar o controller PostController e o método é delete.</p>
+    <p>Criar rota /posts/delete, acessar o controller PostController e o método é delete.</p>
     <p>No controller criar a função <strong>delete com parâmetro Request.</strong></p>
+    <p>Para evitar erros, é bom fazer o find no id, depois caso tenha aquele id, o dele é feito.</p>
+    <ul>
+        <li>$post = Post::find(3);</li>
+        <li>if($post) { $post->delete(); }</li>
+        <li>else { return 'Não existe post com esse id' };</li>
+    </ul>
 
     
 </body>
