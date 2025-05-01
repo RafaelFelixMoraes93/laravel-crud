@@ -87,6 +87,29 @@
         $posts = Post::all();
         return $posts;
     } --}}
+
+    <h2>Update</h2>
+    <p>Criar rota /posts/update, acessar o controller PostController e o método é update.</p>
+    <p>No controller criar a função <strong>update com parâmetro Request.</strong></p>
+    <p><Strong>Exemplo para alterar por id.</Strong></p>
+    <ul>
+        <li>$post = Post::find(1);</li>
+        <li>$pos->title = 'Meu post atualizado.</li>
+        <li>$post->save();</li>
+        <li>return $post;</li>
+    </ul>
+    <p><Strong>Exemplo para alterar multiplos.</Strong></p>
+    <ul>
+        <li>$post = Post::where('id','>',0)->update(([
+            'author' => 'Desconhecido', 'title' => 'Alterado'
+        ]));</li>
+        <li>return $post;</li>
+    </ul>
+
+    <h2>Delete</h2>
+    <p>Criar rota /posts/update, acessar o controller PostController e o método é delete.</p>
+    <p>No controller criar a função <strong>delete com parâmetro Request.</strong></p>
+
     
 </body>
 </html>
