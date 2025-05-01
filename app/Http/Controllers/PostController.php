@@ -18,4 +18,15 @@ class PostController extends Controller
         $post->save();
         dd($post);
     }
+
+    public function read(Request $request) {
+        $post = new Post() ;
+        $post = $post->find(1);
+
+        return $post;
+    }
+    public function all(Request $request) {
+        $posts = Post::all() ;
+        return $posts;
+    }
 }
