@@ -10,9 +10,9 @@ class PostController extends Controller
 {
     public function create(Request $request) {
         $new_post = [
-            'title' => 'Meu primeiro Post2',
-            'content'=> 'Conteúdo qualquer2',
-            'author' => 'Pedro2',
+            'title' => 'Meu primeiro Post4',
+            'content'=> 'Conteúdo qualquer4',
+            'author' => 'Pedro4',
         ];
         $post = new Post($new_post);
         $post->save();
@@ -35,5 +35,14 @@ class PostController extends Controller
             'author' => 'Desconhecido'
         ]));
         return $post;
+    }
+
+    public function delete(Request $request) {
+        $post = Post::find(8);
+        if($post){
+            $post->delete();
+        } else {
+            return 'Não existe post com esse id';
+        }        
     }
 }
