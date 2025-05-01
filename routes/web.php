@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,3 +10,5 @@ Route::get('/', function () {
 Route::get('/anotacoes', function () {
     return view('anotacoes');
 });
+
+Route::get('/posts/create', [PostController::class, 'create'] );
