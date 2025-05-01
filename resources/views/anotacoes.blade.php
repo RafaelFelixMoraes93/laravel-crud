@@ -64,6 +64,29 @@
         <li>$post->variavel = 'valorDavariavel'</li>
     </ul>
 
+    <h2>Read</h2>
+    <p>Criar rota /posts/read acessar o PostController e o método read.</p>
+    <p>No controller criar a função <strong>read com parâmetro Request.</strong></p>
+    <p><strong>Para ler todos os posts (all)</strong></p>
+    <p>Há algumas formas de ler os posts.</p>
+    <p>$post = new Post();</p>
+    <p>$posts = $post->all();</p>
+    <p>dd($post);</p>
+
+    <p>Lendo um post especifico(where ou find)</p>
+    <p>$posts = $post->find(2)</p>
+    <p><strong>O find sempre pegará a chave primária definida na tebela!</strong></p>    
+    
+    {{-- public function read(Request $request) {
+        $post = new Post() ;
+        $post = $post->find(1);
+
+        return $post;
+    }
+    public function all(Request $request) {
+        $posts = Post::all();
+        return $posts;
+    } --}}
     
 </body>
 </html>
