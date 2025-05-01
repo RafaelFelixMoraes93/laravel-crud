@@ -43,6 +43,27 @@
     </ul>
     <p>No model Post, criamos um protected $ fillable = "["'adicionamos todos os campos necessarios'"]" dentro de um array.</p>
 
+    <h2>Create</h2>
+    <p>Criar rota /posts/create, acessar o controller PostController e o método é create.</p>
+    <p>No controller criar a função <strong>create com parâmetro Request.</strong></p>
+    <p>Criar a variável $post = new Post();</p>
+
+    <p>Há algumas formas de criar os novos posts.</p>
+    <p><Strong>Primeira forma(mais comumu)</Strong></p>
+    <ul>
+        <li>$post = new Post($new_post);</li>
+        <li>$post0>save();</li>
+        <li>dd($post);</li>
+    </ul>
+
+    <p><strong>Segunda fomra</strong></p>
+    <ul>
+        <li>$post = new Post();</li>
+        <li>$post->variavel = 'valorDavariavel'</li>
+        <li>$post->variavel = 'valorDavariavel'</li>
+        <li>$post->variavel = 'valorDavariavel'</li>
+    </ul>
+
     
 </body>
 </html>
