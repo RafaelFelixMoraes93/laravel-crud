@@ -21,12 +21,19 @@ class PostController extends Controller
 
     public function read(Request $request) {
         $post = new Post() ;
-        $post = $post->find(1);
+        $post = $post->find(2);
 
         return $post;
     }
     public function all(Request $request) {
         $posts = Post::all() ;
         return $posts;
+    }
+
+    public function update(Request $request){
+        $post = Post::where('id','>',0)->update(([
+            'author' => 'Desconhecido'
+        ]));
+        return $post;
     }
 }
