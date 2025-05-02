@@ -8,7 +8,20 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function create(Request $request) {
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //No futuro irá apenas exibir um formulário.
         $new_post = [
             'title' => 'Meu primeiro Post4',
             'content'=> 'Conteúdo qualquer4',
@@ -16,33 +29,57 @@ class PostController extends Controller
         ];
         $post = new Post($new_post);
         $post->save();
-        dd($post);
+        return $post;
     }
 
-    public function read(Request $request) {
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //No futuro, receberá um post com um novo recurso.
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
         $post = new Post() ;
-        $post = $post->find(2);
+        $post = $post->find($id);
 
         return $post;
     }
-    public function all(Request $request) {
-        $posts = Post::all() ;
-        return $posts;
-    }
 
-    public function update(Request $request){
-        $post = Post::where('id','>',0)->update(([
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        $post = Post::find($id)->update(([
             'author' => 'Desconhecido'
         ]));
         return $post;
     }
 
-    public function delete(Request $request) {
-        $post = Post::find(8);
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        $post = Post::find($id);
         if($post){
             $post->delete();
         } else {
             return 'Não existe post com esse id';
-        }        
+        }    
     }
 }
