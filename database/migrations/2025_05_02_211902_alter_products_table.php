@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
-        Schema::table("products", function (Blueprint $table) {
-            $table->integer("quantidade_minima")
-            ->default(1)
-            ->after('quantidade');
-    });
+    //     Schema::table("products", function (Blueprint $table) {
+    //         $table->integer("quantidade_minima")
+    //         ->default(1)
+    //         ->after('quantidade');
+    // });
 }
 
     /**
