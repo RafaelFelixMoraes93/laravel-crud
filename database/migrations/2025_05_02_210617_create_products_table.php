@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('codigo')->unique();
             $table->integer('quantidade')->default(0);
+            $table->text('obs')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
