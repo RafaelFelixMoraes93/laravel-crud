@@ -116,6 +116,11 @@
         <li>else { return 'Não existe post com esse id' };</li>
     </ul>
 
+    <h3>SoftDelete</h3>
+    <p>É aconselhavél criar um softdelete, pois caso haja relacionamentos, uma tabela pode perder o relacionamento com a outra, ou seja, pode quebrar o sistema.</p>
+    <p>Para isso vamos no model e adicionamos <strong>'use SoftDeletes;'.</strong></p>
+    <p>na migration adicionamos <strong>'$table->softDeletes();'.</strong></p>
+
     
 </body>
 </html>
