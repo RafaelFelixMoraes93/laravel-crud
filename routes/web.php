@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/relacionamentos', function () {
+    return view('relacionamentos');
+});
+
 Route::get('/anotacoes', function () {
     return view('anotacoes');
 });
